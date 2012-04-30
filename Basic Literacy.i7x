@@ -37,9 +37,9 @@ Writing it on is an action applying to one topic and one thing and requiring lig
 
 Check writing it on when the second noun is not writable (this is the check writable rule): instead say "[The second noun] is not for writing on."
 
-To say taking the writing tool (M - a writing tool): say "(taking [the M])[command clarification break]".
+To say implicitly taking (T - a thing): say "(taking [the T])[command clarification break]".
 
-Check writing it on when the player does not carry a writing tool and a writing tool is touchable  (this is the take a writing tool rule): let M be a random touchable writing tool; silently try taking M; say taking the writing tool M.
+Check writing it on when the player does not carry a writing tool and a writing tool is touchable  (this is the take a writing tool rule): let M be a random touchable writing tool; silently try taking M; say implicitly taking M.
 
 Check writing it on when the person asked does not carry a writing tool (this is the check for writing tool rule): instead say "You need something to write with."
 
@@ -61,13 +61,13 @@ Erasing is an action applying to one thing and requiring light. Understand "eras
 
 Check erasing when the noun is not writable  (this is the check erasable rule): instead say "[The noun] is not erasable."
 
-Check erasing when the player does not carry an erasing tool and an erasing tool is touchable: let E be a random erasing tool; silently try taking E; say "(taking [the E])[command clarification break]".
+Check erasing when the player does not carry an erasing tool and an erasing tool is touchable (this is the take an erasing tool rule): let E be a random erasing tool; silently try taking E; say implicitly taking E.
 
-Check erasing when the player does not carry an erasing tool: instead say "You need something to erase with."
+Check erasing when the player does not carry an erasing tool (this is the check for erasing tool rule): instead say "You need something to erase with."
 
-Carry out erasing: now the read text of the noun is "".
+Carry out erasing (this is the carry out erasing rule): now the read text of the noun is "".
 
-Report erasing: say "You erase [the noun]."
+Report erasing (this is the report erasing rule): say "You erase [the noun]."
 
 Basic Literacy ends here.
 
@@ -93,7 +93,14 @@ This is a really straightforward example.
 
 	The metal tray is a supporter. It is part of the whiteboard. The description is "This narrow metal tray is built to support markers and erasers."
 
-	A marker is a kind of writing tool. The black marker is a marker on the metal tray. The description is "This is as generic a black whiteboard marker as you'll ever hope to find." 
+	A marker is a kind of writing tool. A marker cap is a kind of thing. The description of a marker cap is usually "This cap keeps the marker from drying up." A marker cap is part of every marker. Does the player mean doing something with the marker cap: it is unlikely. Instead of doing something other than examining with the marker cap: say "There is no need to fiddle with the marker cap."
+
+	The black marker is a marker on the metal tray. The description is "This is as generic a whiteboard marker as you'll ever hope to find. It has a black cap."  
+
+	Report writing it on (this is the detailed report writing rule): say "You take the cap off the marker, write on [the second noun], and replace the cap carefully." The detailed report writing rule is listed instead of the report writing rule in the report writing it on rulebook.
 
 	An eraser is an erasing tool. The description is usually "A classic fuzzy whiteboard eraser, none too clean." On the metal tray is an eraser.
-	
+
+	Test me with "read whiteboard / erase whiteboard / read whiteboard".
+
+It is difficult to write a test for writing on the whiteboard, because the writing command uses the command buffer, which is not filled by the testing command.
