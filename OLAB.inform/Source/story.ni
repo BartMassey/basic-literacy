@@ -1,9 +1,6 @@
-Basic Literacy by Bart Massey begins here.
+"OLAB" by "Bart Massey"
 
-"Provides objects and actions for (proper) reading, writing and erasing."
-
-[ Copyright © 2012 Bart Massey]
-[ Released under the Creative Commons Attribution 3.0 United States license: http://creativecommons.org/licenses/by/3.0/us/ ]
+Book - Basic Literacy
 
 Chapter - Reading
 
@@ -41,7 +38,7 @@ To say error (T - a thing) is not for writing on (this is say error not for writ
 
 To say implicitly taking (T - a thing) (this is the say implicitly taking a thing for basic literacy rule): say "(taking [the T])[command clarification break]".
 
-Rule for implicitly taking a writing tool (this is the implicitly take a writing tool rule): let M be a random touchable writing tool; silently try taking M; say implicitly taking M.
+Rule for implicitly taking a writing tool (this is the implicitly take a writing tool rule): let M be a random touchable writing tool; silently try taking M; say implicitly taking M; rule succeeds.
 
 To say error missing writing tool: say "You need something to write with."
 
@@ -55,7 +52,7 @@ Report writing it on (this is the report writing rule): say  "You write on [the 
 
 Chapter - Erasing
 
-An erasing tool is a kind of thing.
+A thing can be erasable. A thing is usually erasable. An erasing tool is a kind of thing.
 
 To say error too many erasables (this is the say error several erasables rule): say "There are several things to erase."
 
@@ -67,50 +64,35 @@ Rule for supplying a missing noun when erasing (this is the choose an erasable r
 
 To say error (T - a thing) need not be erased (this is the say error no writing rule): say "There is no writing on [the T] to erase."
 
-To say error (T - a thing) is not erasable (this is the say error not erasable rule): say "[The T] is not erasable."
+To say error (T - a thing) cannot be erased (this is the say error not erasable rule): say "[The T] is not erasable."
 
 To say error no erasing tool (this is the say error no erasing tool rule): say "You need something to erase with."
 
-Rule for implicitly taking an erasing tool (this is the implicitly take an erasing tool rule): let E be a random erasing tool; silently try taking E; say implicitly taking E.
+Rule for implicitly taking an erasing tool (this is the implicitly take an erasing tool rule): let E be a random erasing tool; silently try taking E; say implicitly taking E; rule succeeds.
 
-Check erasing (this is the check erasing rule): if the noun is not writable or the read text of the noun is empty, instead say error the noun need not be erased; if the noun is not erasable, instead say error the noun is not erasable; if the player carries an erasing tool, rule succeeds; if an erasing tool is touchable, abide by the implicitly take an erasing tool rule; instead say error no erasing tool.
+Check erasing (this is the check erasing rule): if the noun is not writable or the read text of the noun is empty, instead say error the noun need not be erased; if the noun is not erasable, instead say error the noun cannot be erased; if the player carries an erasing tool, rule succeeds; if an erasing tool is touchable, abide by the implicitly take an erasing tool rule; instead say error no erasing tool.
 
 Carry out erasing (this is the erasing rule): now the read text of the noun is "".
 
 Report erasing (this is the report erasing rule): say "You erase [the noun]."
 
-Basic Literacy ends here.
+Book - OLAB
 
----- Documentation ----
+The OLAB is a room. "This room is bare except for a whiteboard mounted on one wall."
 
-This module extends Inform 7 by providing some basic actions and types that allow the player to read, write and erase text. This is implemented by giving every thing an indexed text called the "read text". With this module loaded, the "read" command no longer invokes the "examining" action. Instead, "read [thing]" shows the read text of the thing read.
+The whiteboard is writable scenery in the OLAB. The description is "A regulation-issue whiteboard with a metal tray.[if read text of the whiteboard is not empty] [the contents of the whiteboard][end if]". The read text is "SCRIBBLE ON ME". Understand "board" as the whiteboard. Understand "scribble [text] on [whiteboard]" as writing it on.
 
-Allowing the player to write arbitrary text on things is also allowed. The thing to be written on must have the "writable" property, and the player must have access to a "writing tool". Subsequent writes will append new paragraphs to the read text of the thing written.
+To say the contents of the whiteboard: say "Scribbled on the whiteboard is:"; silently try reading the whiteboard.
 
-Allowing the player to erase the text on things is also allowed. The thing to be written on must have the "writable" property, and the player must have access to an "erasing tool".
+The metal tray is a supporter. It is part of the whiteboard. The description is "This narrow metal tray is built to support markers and erasers."
 
-Example: ** OLAB - A whiteboard on which the player can make notes
+A marker is a kind of writing tool. A marker cap is a kind of thing. The description of a marker cap is usually "This cap keeps the marker from drying up." A marker cap is part of every marker. Does the player mean doing something with the marker cap: it is unlikely. Instead of doing something other than examining with the marker cap: say "There is no need to fiddle with the marker cap."
 
-This is a really straightforward example.
+The black marker is a marker on the metal tray. The description is "This is as generic a whiteboard marker as you'll ever hope to find. It has a black cap."
 
-	*: "OLAB" by "Bart Massey"
+Report writing it on (this is the detailed report writing rule): say "You take the cap off the marker, write on [the second noun], and replace the cap carefully." The detailed report writing rule is listed instead of the report writing rule in the report writing it on rulebook.
 
-	The OLAB is a room. "This room is bare except for a whiteboard mounted on one wall."
+An eraser is an erasing tool on the metal tray. The description is "A classic fuzzy whiteboard eraser, none too clean."
 
-	The whiteboard is writable scenery in the OLAB. The description is "A regulation-issue whiteboard with a metal tray.[if read text of the whiteboard is not empty] [the contents of the whiteboard][end if]". The read text is "SCRIBBLE ON ME". Understand "board" as the whiteboard. Understand "scribble [text] on [whiteboard]" as writing it on.
+Test me with "read whiteboard / erase whiteboard / read whiteboard".
 
-	To say the contents of the whiteboard: say "Scribbled on the whiteboard is:"; silently try reading the whiteboard.
-
-	The metal tray is a supporter. It is part of the whiteboard. The description is "This narrow metal tray is built to support markers and erasers."
-
-	A marker is a kind of writing tool. A marker cap is a kind of thing. The description of a marker cap is usually "This cap keeps the marker from drying up." A marker cap is part of every marker. Does the player mean doing something with the marker cap: it is unlikely. Instead of doing something other than examining with the marker cap: say "There is no need to fiddle with the marker cap."
-
-	The black marker is a marker on the metal tray. The description is "This is as generic a whiteboard marker as you'll ever hope to find. It has a black cap."  
-
-	Report writing it on (this is the detailed report writing rule): say "You take the cap off the marker, write on [the second noun], and replace the cap carefully." The detailed report writing rule is listed instead of the report writing rule in the report writing it on rulebook.
-
-	An eraser is an erasing tool on the metal tray. The description is "A classic fuzzy whiteboard eraser, none too clean."
-
-	Test me with "read whiteboard / erase whiteboard / read whiteboard".
-
-It is difficult to write a test for writing on the whiteboard, because the writing command uses the command buffer, which is not filled by the testing command.
