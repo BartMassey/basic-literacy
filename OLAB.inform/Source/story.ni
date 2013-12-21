@@ -14,7 +14,13 @@ Definition: A thing is read-enabled if it is readable or it is write-enabled.
 
 Every thing has an indexed text called the read text.
 
-Understand "read [thing]" as reading.
+Understand the command "read [something]" as something new. Understand "read" or "read [thing]" as reading.
+
+To say error too many readables (this is say error several things to read rule): say "There are several things to read."
+
+To say error no readables (this is the say error nothing to read rule): say "There is nothing to read."
+
+Rule for supplying a missing noun when reading (this is the supply a readable thing rule): let N be the number of visible read-enabled things; if N is greater than one, instead say error too many readables; if N is zero, instead say error no readables; now the noun is a random visible read-enabled thing.
 
 To say error (T - a thing) is unreadable (this is the say  error is unreadable rule): say "[The T] is unreadable."
 
@@ -123,4 +129,4 @@ A fixed in place erasing tool called the glued-down cloth is on the metal tray. 
 
 The metal trashcan is a closed openable fixed in place container in the OLAB. The description is "A nondescript metal trashcan with a hinged lid."
 
-Test me with "read whiteboard / write hello on whiteboard / write goodbye on whiteboard / read whiteboard / erase / read whiteboard / open trashcan / put eraser in trashcan / close trashcan / write hello on whiteboard / erase".
+Test me with "read / write hello / write goodbye / read / erase / read / open trashcan / put eraser in it / put black eraser in trashcan / close trashcan / write hello / erase".
