@@ -14,13 +14,13 @@ Every thing has an indexed text called the read text.
 
 Understand "read [thing]" as reading.
 
-To say error (the thing read - a thing) is unreadable (this is the say  error is unreadable rule): say "[The thing read] is unreadable."
+To say error (T - a thing) is unreadable (this is the say  error is unreadable rule): say "[The T] is unreadable."
 
 Check an actor reading when the noun is not readable (this is the check readability rule): instead say error the noun is unreadable.
 
-To say the read text of (the thing read - a thing) (this is the say the read text rule): Say "[command clarification break][read text of the thing read][paragraph break][command clarification break]".
+To say the read text of (T - a thing) (this is the say the read text rule): Say "[command clarification break][read text of T][paragraph break][command clarification break]".
 
-Carry out reading when the read text of the noun is empty (this is the carry out reading something blank rule): say "[The noun] is blank."; rule succeeds.
+Instead of reading when the read text of the noun is empty (this is the instead of reading something blank rule): say "[The noun] is blank."
 
 Carry out reading (this is the carry out reading rule): say the read text of the noun.
 
@@ -48,7 +48,7 @@ To say error missing writing tool: say "You need something to write with."
 
 Before writing when the player does not carry a writing tool and a writing tool is touchable (this is the obtain a writing tool rule): let M be a random touchable writing tool; say implicitly taking M; silently try taking M.
 
-Check writing (this is the check writing rule): if the second noun is not writable, instead say error the second noun is not for writing on; if the player does not carry a writing tool, instead say error missing writing tool.
+Check writing (this is the check writing rule): unless the second noun is writable, instead say error the second noun is not for writing on; unless the player carries a writing tool, instead say error missing writing tool.
 
 The text written is an indexed text which varies.
 
@@ -76,7 +76,7 @@ To say error no erasing tool (this is the say error no erasing tool rule): say "
 
 Before erasing when the player does not carry an erasing tool and an erasing tool is touchable (this is the obtain an erasing tool rule): let E be a random touchable erasing tool; say implicitly taking E; silently try taking E.
 
-Check erasing (this is the check erasing rule): if the noun is not writable or the read text of the noun is empty, instead say error the noun need not be erased; if the noun is not erasable, instead say error the noun cannot be erased; if the player does not carry an erasing tool, instead say error no erasing tool.
+Check erasing (this is the check erasing rule): unless the noun is writable and the read text of the noun is not empty, instead say error the noun need not be erased; unless the noun is erasable, instead say error the noun cannot be erased; unless the player carries an erasing tool, instead say error no erasing tool.
 
 Carry out erasing (this is the carry out erasing rule): now the read text of the noun is "".
 
@@ -102,5 +102,4 @@ An erasing tool called an eraser is on the metal tray. The description is "A cla
 
 The metal trashcan is a closed openable fixed in place container in the OLAB. The description is "A nondescript metal trashcan with a hinged lid."
 
-Test me with "read whiteboard / write hello on whiteboard / write goodbye on whiteboard / read whiteboard / erase whiteboard / read whiteboard".
-
+Test me with "read whiteboard / write hello on whiteboard / write goodbye on whiteboard / read whiteboard / erase whiteboard / read whiteboard / open trashcan / put eraser in trashcan / close trashcan / write hello on whiteboard / erase whiteboard".
