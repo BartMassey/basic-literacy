@@ -66,7 +66,7 @@ To say error no erasables (this is the say error no erasables rule): say "There 
 
 Erasing is an action applying to one touchable thing and requiring light. Understand "erase" or "erase [thing]" as erasing.
 
-Rule for supplying a missing noun when erasing (this is the choose an erasable rule): let N be the number of touchable writable things; if N is greater than one, instead say error too many erasables; if N is zero, instead say error no erasables; now the second noun is a random touchable writable thing.
+Rule for supplying a missing noun when erasing (this is the choose an erasable rule): let N be the number of touchable writable things; if N is greater than one, instead say error too many erasables; if N is zero, instead say error no erasables; now the noun is a random touchable writable thing.
 
 To say error (T - a thing) need not be erased (this is the say error no writing rule): say "There is no writing on [the T] to erase."
 
@@ -102,4 +102,4 @@ An erasing tool called an eraser is on the metal tray. The description is "A cla
 
 The metal trashcan is a closed openable fixed in place container in the OLAB. The description is "A nondescript metal trashcan with a hinged lid."
 
-Test me with "read whiteboard / write hello on whiteboard / write goodbye on whiteboard / read whiteboard / erase whiteboard / read whiteboard / open trashcan / put eraser in trashcan / close trashcan / write hello on whiteboard / erase whiteboard".
+Test me with "read whiteboard / write hello on whiteboard / write goodbye on whiteboard / read whiteboard / erase / read whiteboard / open trashcan / put eraser in trashcan / close trashcan / write hello on whiteboard / erase".
