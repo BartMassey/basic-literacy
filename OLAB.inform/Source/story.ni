@@ -50,8 +50,11 @@ To say error too many writables (this is say error several things to write on ru
 
 To say error no writables (this is the say error nothing to write on rule): say "There is nothing to write on."
 
-Writing it on is an action applying to one topic and one touchable thing and requiring light. Understand "write [text]" or "write [text] on [thing]" as writing it on.
+[ XXX Writing text containing "on" on some specific thing gets the parser quite lost. Not sure how to fix this. ]
+[ XXX The parser doesn't remove the quotes from parsed quoted text. Not sure how to fix this. ]
+Writing it on is an action applying to one topic and one touchable thing and requiring light. Understand "write [text]" or "write [text] on [thing]" as writing it on. Understand "write on [thing]" or "write [thing]" or "write" as a mistake ("You must specify what text you want to write.")
 
+[ XXX Use the last thing written on here. ]
 Rule for supplying a missing second noun when writing (this is the supply a writable thing rule): let N be the number of touchable write-enabled things; if N is greater than one, instead say error too many writables; if N is zero, instead say error no writables; now the second noun is a random touchable write-enabled thing.
 
 To say error (T - a thing) is not for writing on (this is say error not for writing on rule): say "[The T] is not for writing on."
@@ -119,7 +122,7 @@ A marker is a kind of writing tool. A marker cap is a kind of thing. The descrip
 
 The black marker is a marker on the metal tray. The description is "This is as generic a whiteboard marker as you'll ever hope to find. It has a black cap."
 
-Report writing it on (this is the detailed report writing rule): say "You take the cap off the marker, write on [the second noun], and replace the cap carefully." The detailed report writing rule is listed instead of the report writing rule in the report writing it on rulebook.
+Report writing (this is the detailed report writing rule): say "You take the cap off [the random marker carried by the player], write on [the second noun], and replace the cap carefully." The detailed report writing rule is listed instead of the report writing rule in the report writing it on rulebook.
 
 An erasing tool called a blue eraser is on the metal tray. The description is "A classic fuzzy blue whiteboard eraser, none too clean."
 
