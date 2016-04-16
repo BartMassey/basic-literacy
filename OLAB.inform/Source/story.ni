@@ -14,7 +14,7 @@ Definition: A thing is read-enabled if it is readable or it is write-enabled.
 
 Every thing has an indexed text called the read text.
 
-Understand the command "read [something]" as something new. Understand "read" or "read [thing]" as reading.
+Understand the command "read" as something new. Understand "read" or "read [thing]" as reading.
 
 To say error too many readables (this is say error several things to read rule): say "There are several things to read."
 
@@ -28,7 +28,7 @@ Check reading when the noun is not read-enabled (this is the check readability r
 
 Check someone reading when the noun is not read-enabled (this is the check actor readability rule): rule fails.
 
-To say the read text of (T - a thing) (this is the say the read text rule): Say "[command clarification break][read text of T][paragraph break][command clarification break]".
+To say the read text of (T - a thing) (this is the say the read text rule): Say "[command clarification break][paragraph break][read text of T][command clarification break]".
 
 To say error (T - a thing) is blank (this is the say something is blank rule): say "[The noun] is blank."
 
