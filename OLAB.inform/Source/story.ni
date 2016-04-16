@@ -16,7 +16,7 @@ Every thing has an indexed text called the read text.
 
 Understand the command "read" as something new. Understand "read" or "read [thing]" as reading.
 
-To say error too many readables (this is say error several things to read rule): say "There are several things to read."
+To say error too many readables (this is the say error several things to read rule): say "There are several things to read."
 
 To say error no readables (this is the say error nothing to read rule): say "There is nothing to read."
 
