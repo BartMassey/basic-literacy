@@ -73,7 +73,7 @@ To say error no erasing tool (this is the say error no erasing tool rule): say "
 
 Rule for implicitly taking an erasing tool (this is the implicitly take an erasing tool rule): let E be a random erasing tool; silently try taking E; say implicitly taking E.
 
-Check erasing (this is the check erasing rule): if the noun is not writable or the read text of the noun is empty, instead say error the noun need not be erased; if the noun is not erasable, instead say error the noun is not erasable; if the player carries an erasing tool, rule succeeds; if an erasing tool is touchable, abide by the implicitly take an erasing tool rule; instead say error no erasing tool.
+Check erasing (this is the check erasing rule): if the noun is not writable or the read text of the noun is empty, instead say error the noun need not be erased; if the noun is not writable, instead say error the noun is not erasable; if the player carries an erasing tool, rule succeeds; if an erasing tool is touchable, abide by the implicitly take an erasing tool rule; instead say error no erasing tool.
 
 Carry out erasing (this is the erasing rule): now the read text of the noun is "".
 
