@@ -11,13 +11,11 @@ command here replaces the default use of "read" as an "examine" command.
 
 - Include the extension by including the line "Include Basic Literacy by Bart Massey." after your project's heading.
 
-- Mark a thing as "Writable" to inherit all characteristics from Basic Literacy. Add an if-statement to read it's contents unless it's empty.
+- Mark a thing as "Writable" to inherit all characteristics from Basic Literacy. Add an if-statement to read its contents unless it's empty.
 
 	
 		The whiteboard is writable scenery in the OLAB. The description is "A regulation-issue whiteboard with a
-		 metal tray.[if read text of the whiteboard is not empty] [the contents of the whiteboard][end if]". The 
-		 read text is "SCRIBBLE ON ME". Understand "board" as the whiteboard. Understand "scribble [text] on 
-		 [whiteboard]" as writing it on.
+		 metal tray.[if read text of the whiteboard is not empty] [the contents of the whiteboard][end if]".
 
 
 - A writing tool is used to write on the writable Thing. Make a new kind of writing tool.
