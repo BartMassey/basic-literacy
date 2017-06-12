@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-2">
+  <generator>Windows Inform 7 6M62</generator>
+  <activeNode nodeId="node-77"/>
+  <item nodeId="node-2">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">The Poet's bedroom is place where vulnerability and fragile emotions are encouraged. (The poet is a very sensitive person, be careful about what you write in his notebook.)&#x000A;&#x000A;Poet's Notebook&#x000A;An Interactive Fiction by Andre Rodriguez&#x000A;Release 1 / Serial number 170611 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Poet's Bedroom&#x000A;This is where the Poet sits down to think of life and reflects upon existence.&#x000A;&#x000A;You can see a desk (on which are pen and an eraser) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-67"/>
+      <child nodeId="node-76"/>
+    </children>
+  </item>
+  <item nodeId="node-67">
+    <command xml:space="preserve">showme</command>
+    <result xml:space="preserve">Poet's Bedroom - room&#x000A;    yourself - person&#x000A;    desk - supporter&#x000A;        Poet's Notebook&#x000A;        pen - writing tool&#x000A;        eraser - erasing tool&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-68"/>
+    </children>
+  </item>
+  <item nodeId="node-68">
+    <command xml:space="preserve">read notebook</command>
+    <result xml:space="preserve">The Poet's Notebook is blank.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-69"/>
+      <child nodeId="node-72"/>
+    </children>
+  </item>
+  <item nodeId="node-69">
+    <command xml:space="preserve">write "hi" on notebook</command>
+    <result xml:space="preserve">The writable Poet's Notebook is not for writing on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-70"/>
+    </children>
+  </item>
+  <item nodeId="node-70">
+    <command xml:space="preserve">fuvk yourself</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-71"/>
+    </children>
+  </item>
+  <item nodeId="node-71">
+    <command xml:space="preserve">exit</command>
+    <result xml:space="preserve">But you aren't in anything at the moment.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-72">
+    <command xml:space="preserve">write "hi baby" on notebook</command>
+    <result xml:space="preserve">(taking pen)&#x000A;You take the cap off nothing, write on the Poet's Notebook, and replace the cap carefully.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-73"/>
+    </children>
+  </item>
+  <item nodeId="node-73">
+    <command xml:space="preserve">read notebook</command>
+    <result xml:space="preserve">"hi baby"&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-74"/>
+    </children>
+  </item>
+  <item nodeId="node-74">
+    <command xml:space="preserve">write "bye boy" on notebook</command>
+    <result xml:space="preserve">You take the cap off nothing, write on the Poet's Notebook, and replace the cap carefully.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-75"/>
+    </children>
+  </item>
+  <item nodeId="node-75">
+    <command xml:space="preserve">read notebook</command>
+    <result xml:space="preserve">"hi baby"&#x000A;&#x000A;"bye boy"&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-76">
+    <command xml:space="preserve">read notebook</command>
+    <result xml:space="preserve">The Poet's Notebook is blank.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-77"/>
+    </children>
+  </item>
+  <item nodeId="node-77">
+    <command xml:space="preserve">write "brambus" on notebook</command>
+    <result xml:space="preserve">(taking pen)&#x000A;You take the cap off nothing, write on the Poet's Notebook, and replace the cap carefully.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>
