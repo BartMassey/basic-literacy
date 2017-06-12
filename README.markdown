@@ -14,18 +14,18 @@ command here replaces the default use of "read" as an "examine" command.
 - Mark a thing as "Erasable" to inherit all characteristics from Basic Literacy. Add an if-statement to read it's contents unless it's empty.
 
 	
-	The Poet's Notebook is erasable scenery on the desk. The description is "A notebook to transform thoughts and 
-	tears into words.  [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand 
-	"notebook" as the Poet's Notebook. Understand "write [text] on [Poet's Notebook]" as writing it on.
+		The Poet's Notebook is erasable scenery on the desk. The description is "A notebook to transform thoughts and 
+		tears into words.  [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand 
+		"notebook" as the Poet's Notebook. Understand "write [text] on [Poet's Notebook]" as writing it on.
 
 
 - A "marker" is a Thing used to write on your new Writable Thing. Make a new thing and inherit from the Marker.
 
-	The pen is a marker on the desk. The description is "A regular pen. Many stories have been written with this old friend."
+		The pen is a marker on the desk. The description is "A regular pen. Many stories have been written with this old friend."
 
 - An erasing tool object is used to erase the contents written on your writable Thing.
 	
-	An erasing tool called an eraser is on the desk. The description is "An eraser. Use this to erase your Poetry, but don't be too harsh on yourself, self judgement may hurt your self esteem."
+		An erasing tool called an eraser is on the desk. The description is "An eraser. Use this to erase your Poetry, but don't be too harsh on yourself, self judgement may hurt your self esteem."
 
 - Test the extension with the following commands:
 
