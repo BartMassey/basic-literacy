@@ -2,7 +2,7 @@
 
 <h2> The Extension </h2>
 
-This Inform 7 extension provides commands for reading, writing and erasing text on arbitrary things. The "read"
+This Inform 7 extension provides commands for reading, writing and erasing text on arbitrary things. The "read" </br>
 command here replaces the default use of "read" as an "examine" command.
 
 <h2> Getting Started </h2>
