@@ -1,0 +1,120 @@
+Debugging log of Inform 7
+Inform called as: C:\Program Files (x86)\Inform 7\Compilers\ni -internal C:\Program Files (x86)\Inform 7\Internal -project C:\Users\andre\Documents\git\basic-literacy\Basic Literacy.i7xp -format=ulx
+Found language bundle 'English' (built in)
+Found language bundle 'French' (built in)
+Found language bundle 'German' (built in)
+Found language bundle 'Italian' (built in)
+Found language bundle 'Spanish' (built in)
+Found language bundle 'Swedish' (built in)
+Reading language definition from <C:\Program Files (x86)\Inform 7\Internal\Languages\English\Syntax.preform>
+720 declarations read (14183 words)
+
+
+-----------------------------------------------------
+Phase I ... Lexical analysis
+-----------------------------------------------------
+
+I've now read your source text, which is 193 words long.
+
+
+-----------------------------------------------------
+Phase II ... Semantic analysis Ia
+-----------------------------------------------------
+
+I've also read Standard Rules by Graham Nelson, which is 42655 words long.
+I've also read English Language by Graham Nelson, which is 2297 words long.
+
+
+-----------------------------------------------------
+Phase III ... Initialise language semantics
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase IV ... Semantic analysis Ib
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase V ... Semantic analysis II
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VI ... Semantic analysis III
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VII ... First pass through assertions
+-----------------------------------------------------
+
+    Problem PM_ChalkCheese issued from inform7/Chapter 15/Make Assertions.w, line 1530
+
+      >--> The sentence 'The Poet's Notebook is erasable scenery on the desk' (source
+        text, line 9) appears to say two things are the same - I am reading 'Poet's
+        Notebook' and 'erasable scenery on the desk' as two different things, and
+        therefore it makes no sense to say that one is the other: it would be like
+        saying that 'the chalk is the cheese'. It would be all right if the second
+        thing were the name of a kind, perhaps with properties: for instance 'Dairy
+        Products School is a lighted room' says that something called Dairy
+        Products School exists and that it is a 'room', which is a kind I know
+        about, combined with a property called 'lighted' which I also know about.
+
+    Problem PM_ChalkCheese issued from inform7/Chapter 15/Make Assertions.w, line 1530
+
+      >--> The sentence 'The pen is a marker on the desk' (source text, line 13)
+        appears to say two things are the same - I am reading 'pen' and 'marker on
+        the desk' as two different things, and therefore it makes no sense to say
+        that one is the other: it would be like saying that 'the chalk is the
+        cheese'. It would be all right if the second thing were the name of a kind,
+        perhaps with properties: for instance 'Dairy Products School is a lighted
+        room' says that something called Dairy Products School exists and that it
+        is a 'room', which is a kind I know about, combined with a property called
+        'lighted' which I also know about.
+
+PROPER_NOUN_NT'erasing tool' (indefinite)
+
+Problem PM_CalledWithoutKind issued from inform7/Chapter 15/The Creator.w, line 384
+
+  >--> You wrote 'An erasing tool called an eraser is on the desk' (source text, line 15):
+    but I can only make 'a something called whatever' when the something is a
+    kind I know, possibly qualified with adjectives. For instance, 'an open
+    door called the Marble Door' is fine because 'door' is the name of a kind
+    and 'open' is an adjective which means something for doors. But 'a grand
+    archway called the Great Gates' would not normally mean anything to me,
+    because 'archway' is not one of the standard kinds in Inform. (Try
+    consulting the Kinds index.)
+
+
+
+-----------------------------------------------------
+Phase VIII ... Compilation now complete
+-----------------------------------------------------
+
+Total of 4 files written as streams.
+CPU time: 76 centiseconds
+
+
+That concludes the debugging log from this run of Inform.
+Its contents were as follows, and can be changed by placing
+text like 'Include property creations in the debugging log.'
+or 'Omit everything from the debugging log.' in the source.
+
+Included:
+  debugging log contents  debugging log inclusions
+Omitted:
+  action creations   action pattern compilation  action pattern parsing  assemblies    assertions    case insensitive filehandling
+  conditions    constructed past participles  constructed plurals   description compilation   excerpt meanings   excerpt parsing 
+  expressions    extensions census   figure creations   grammar    grammar construction   headings  
+  implications    inferences    kind changes   kind checking   kind creations   lexical output 
+  local variables   matching    meaning list allocation  memory allocation   noun resolution   object compilation 
+  object creations   object tree   phrase comparisons   phrase compilation   phrase creations   phrase registration 
+  phrase usage   predicate calculus   predicate calculus workings  pronouns    property creations   property provision 
+  property translations   relation definitions   rule attachments   rulebook compilation   spatial map   spatial map workings
+  specification permissions   specification usage   specificities    table construction   template reading   text substitutions 
+  time periods   variable creations   verifications    vocabulary  

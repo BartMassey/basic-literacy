@@ -11,10 +11,10 @@ command here replaces the default use of "read" as an "examine" command.
 
 - Include the extension by including the line "Include Basic Literacy by Bart Massey." after your project's heading.
 
-- Mark a thing as "Erasable" to inherit all characteristics from Basic Literacy. Add an if-statement to read it's contents unless it's empty.
+- Mark a thing as "Writable" to inherit all characteristics from Basic Literacy. Add an if-statement to read it's contents unless it's empty.
 
 	
-		The Poet's Notebook is erasable scenery on the desk. The description is "A notebook to transform thoughts 
+		The Poet's Notebook is writable scenery on the desk. The description is "A notebook to transform thoughts 
 		and tears into words.  [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand 
 		"notebook" as the Poet's Notebook. Understand "write [text] on [Poet's Notebook]" as writing it on.
 
@@ -43,7 +43,8 @@ command here replaces the default use of "read" as an "examine" command.
 
 <h2> Example </h2>
 
-Open the example project titled "The Poet's Notebook" to find an implementation of the extension.
+Look for a section at the end titled "OLAB" to find an implementation of the extension.
+Look for a section at the end titled "The Poet's Notebook" to find an implementation of the extension.
 
 <h2> Credits </h2>
 
