@@ -44,3 +44,10 @@ command here replaces the default use of "read" as an "examine" command.
 <h2> Example </h2>
 
 Open the example project titled "The Poet's Notebook" to find an implementation of the extension.
+
+</hr>
+
+Basic Literacy by Bart Massey
+Copyright © 2012 Bart Massey  
+Released under the Creative Commons Attribution 3.0 United States license:  
+http://creativecommons.org/licenses/by/3.0/us/
