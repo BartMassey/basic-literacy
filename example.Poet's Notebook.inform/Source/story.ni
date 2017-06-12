@@ -1,5 +1,7 @@
 "Poet's Notebook" by Andre Rodriguez
 
+"An example demonstrating the usage of Basic Literacy"
+
 Include Basic Literacy by Bart Massey.
 
 When play begins: say "The Poet's bedroom is place where vulnerability and fragile emotions are encouraged. (The poet is a very sensitive person, be careful about what you write in his notebook.)"
