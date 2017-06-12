@@ -40,8 +40,8 @@ command here replaces the default use of "read" as an "examine" command.
 
 <h2> Example </h2>
 
-Look for a section at the end titled "OLAB" to find an implementation of the extension.
-Look for a section at the end titled "The Poet's Notebook" to find an implementation of the extension.
+- Look for a section at the end titled "OLAB" to find an implementation of the extension.
+- Look for a section at the end titled "The Poet's Notebook" to find an implementation of the extension.
 
 <h2> Credits </h2>
 
