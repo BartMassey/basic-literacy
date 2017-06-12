@@ -45,7 +45,7 @@ command here replaces the default use of "read" as an "examine" command.
 
 Open the example project titled "The Poet's Notebook" to find an implementation of the extension.
 
-</hr>
+<h2> Credits </h2>
 
 Basic Literacy by Bart Massey
 Copyright © 2012 Bart Massey  
