@@ -6,8 +6,11 @@ This Inform 7 extension provides commands for reading, writing and erasing text 
 command here replaces the default use of "read" as an "examine" command.
 
 <h2> Getting Started </h2>
+
 - Clone the repository or download it. Open Inform7 and select File > Install Extension. 
+
 - Include the extension by including the line "Include Basic Literacy by Bart Massey." after your project's heading.
+
 - Mark a thing as "Erasable" to inherit all characteristics from Basic Literacy. Add an if-statement to read it's contents unless it's empty.
 
 	
