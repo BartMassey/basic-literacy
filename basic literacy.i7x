@@ -57,7 +57,7 @@ Report writing (this is the report writing rule): say  "You write on [the second
 
 Chapter - Erasing
 
-A thing can be erasable. A thing is rarely erasable. An erasing tool is a kind of thing.
+A thing can be erasable. A writable thing is erasable. An erasing tool is a kind of thing. 
 
 To say error too many erasables (this is the say error several erasables rule): say "There are several things to erase."
 
@@ -95,9 +95,7 @@ Basic Literacy ends here.
 ---- Documentation ----
 This module extends Inform 7 by providing some basic actions and types that allow the player to read, write and erase text. This is implemented by giving every thing an indexed text called the "read text". With this module loaded, the "read" command no longer invokes the "examining" action. Instead, "read [thing]" shows the read text of the thing read.
 Allowing the player to write arbitrary text on things is also allowed. The thing to be written on must have the "writable" property, and the player must have access to a "writing tool". Subsequent writes will append new paragraphs to the read text of the thing written.
-Allowing the player to erase the text on things is also allowed. The thing to be erased on must have the "erasable" property, and the player must have access to an "erasing tool".
-
-It is difficult to write a test for writing on the whiteboard, because the writing command uses the command buffer, which is not filled by the testing command.
+Allowing the player to erase the text on things is also allowed. The thing to be erased on must have the "erasable" property, and the player must have access to an "erasing tool". A writable thing is also erasable unless stated otherwise. 
 
 Example: * OLAB - A whiteboard on which the player can make notes
 	
@@ -106,7 +104,7 @@ Example: * OLAB - A whiteboard on which the player can make notes
 	Include Basic Literacy by Bart Massey
 	
 	The OLAB is a room. "This room is bare except for a whiteboard mounted on one wall."
-	The whiteboard is writable erasable readable scenery in the OLAB. The description is "A regulation-issue whiteboard with a metal tray.[if read text of the whiteboard is not empty] [the contents of the whiteboard][end if]". The read text is "SCRIBBLE ON ME". Understand "board" as the whiteboard. Understand "scribble [text] on [whiteboard]" as writing it on.
+	The whiteboard is writable scenery in the OLAB. The description is "A regulation-issue whiteboard with a metal tray.[if read text of the whiteboard is not empty] [the contents of the whiteboard][end if]". The read text is "SCRIBBLE ON ME". Understand "board" as the whiteboard. Understand "scribble [text] on [whiteboard]" as writing it on.
 	
 	To say the contents of the whiteboard: say "Scribbled on the whiteboard is:"; silently try reading the whiteboard.
 	
@@ -133,7 +131,7 @@ Example: * The Poet's Notebook
 
 	The desk is a fixed in place supporter in the Poet's Bedroom.
 
-	The Poet's Notebook is writable erasable scenery on the desk. The description is "A notebook to transform thoughts and feelings into words. [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand "notebook" as the Poet's Notebook.
+	The Poet's Notebook is writable scenery on the desk. The description is "A notebook to transform thoughts and feelings into words. [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand "notebook" as the Poet's Notebook.
 
 	To say the contents of the notebook: say "The notebook reads:"; silently try reading the notebook.
 
