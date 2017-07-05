@@ -1,4 +1,4 @@
-Basic Literacy by Bart Massey begins here.
+Version 2.1 of Basic Literacy by Bart Massey begins here.
 
 "Provides objects and actions for (proper) reading, writing and erasing."
 
@@ -13,11 +13,11 @@ Reading is an action applying to one visible thing and requiring light.
 Every thing has an indexed text called the read text. The read text is usually "".
 Understand "read [thing]" as reading.
 
-To say error (the thing read - a thing) has no read text (this is the say  error no read text rule): say "[The thing read] has no text written on it."
-Check an actor reading a thing (called the thing read) (this is the check reading a thing rule): if the read text of the thing read is empty, instead say error the thing read has no read text.
+To say error (the thing read - a thing) has no read text (this is the say error no read text rule): say "[The thing read] has no text written on it."
+Check an actor reading a thing (called the thing read) (this is the check reading a thing rule): if the read text of the thing read is empty, instead say "[error the thing read has no read text]" (A).
 To say the read text of (the thing read - a thing) (this is the say the read text rule): Say "[command clarification break][read text of the thing read][paragraph break][command clarification break]".
 
-Carry out an actor reading a thing (called the thing read) (this is the read rule): say the read text of the thing read.
+Carry out an actor reading a thing (called the thing read) (this is the read rule): say "[the read text of the thing read]" (A).
 
 Chapter - Writing
 
@@ -37,7 +37,7 @@ To say error missing writing tool: say "You need something to write with."
 
 Before writing when the player does not carry a writing tool and a writing tool is touchable (this is the obtain a writing tool rule): let M be a random touchable writing tool; say implicitly taking M; silently try taking M.
 
-Check an actor writing (this is the check writing rule): unless the second noun is writable, instead say error the second noun is not for writing on; unless the player carries a writing tool, instead say error missing writing tool.
+Check an actor writing (this is the check writing rule): unless the second noun is writable, instead say "[error the second noun is not for writing on]"; unless the player carries a writing tool, instead say "[error missing writing tool]".
 
 The text written is an indexed text which varies.
 
@@ -69,9 +69,9 @@ Before erasing when the player does not carry an erasing tool and an erasing too
 	say error failed to obtain an erasing tool;
 	rule fails.
 
-Check an actor erasing (this is the check erasing rule): unless the noun is erasable, instead say error the noun cannot be erased; unless the read text of the noun is not empty, instead say error the noun need not be erased; unless the player carries an erasing tool, instead say error no erasing tool.
+Check an actor erasing (this is the check erasing rule): unless the noun is erasable, instead say "[error the noun cannot be erased]" (A); unless the read text of the noun is not empty, instead say "[error the noun need not be erased]" (B); unless the player carries an erasing tool, instead say "[error no erasing tool]" (C).
 
-Carry out an actor erasing (this is the carry out erasing rule): now the read text of the noun is "".
+Carry out an actor erasing (this is the carry out erasing rule): now the read text of the noun is "" (A).
 Report erasing (this is the report erasing rule): say "You erase [the noun]."
 
 Basic Literacy ends here.
@@ -119,6 +119,6 @@ Example: * The Poet's Notebook - A writable non erasable thing
 
 	To say the contents of the notebook: say "The notebook reads:"; silently try reading the notebook.
 	A writing tool called a pen is on the desk. The description is "A regular pen. Many stories have been written with this old friend."
-	white Ink is an erasing tool on the desk. The description is "Could this white ink erase something written on the notebook?"
+	White Ink is an erasing tool on the desk. The description is "Could this white ink erase something written on the notebook?"
 	Check an actor erasing the notebook  (this is the check erasing notebook rule): say "Not a chance, once you write something here there's no going back."
 
