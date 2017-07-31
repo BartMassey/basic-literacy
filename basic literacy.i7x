@@ -1,28 +1,29 @@
-Basic Literacy by Bart Massey begins here.
+Version 3 of Basic Literacy by Bart Massey begins here.
 
 "Provides objects and actions for (proper) reading, writing and erasing."
 
 [ Copyright © 2012 Bart Massey]
 [ Released under the Creative Commons Attribution 3.0 United States license: http://creativecommons.org/licenses/by/3.0/us/ ]
 
-Chapter - Reading
+Book - Reading
 
-[XXX: IMHO this should eventually rolled into the Standard Rules in some form. Having "read" be a synonym for "examine" is bizarre.]
+[XXX: This book is deliberately not book-specific. It is arguable that this should be split out into a separate extension and eventually rolled into the Standard Rules in some form. Having "read" be a synonym for "examine" is bizarre IMHO.]
+
+Understand the command "read" as something new.
+
 A thing can be readable. A thing is rarely readable.
 
 Reading is an action applying to one visible thing and requiring light.
-
 Every thing has an indexed text called the read text. The read text is usually "".
-
 Understand "read [thing]" as reading.
 
-To say error (the thing read - a thing) has no read text (this is the say  error no read text rule): say "[The thing read] is unreadable or has no text written on it."
+To say error (the thing read - a thing) has no read text (this is the say no read text error rule): say "[The thing read] has no text to read."
 
 Check an actor reading a thing (called the thing read) (this is the check reading a thing rule): if the read text of the thing read is empty, instead say error the thing read has no read text.
 
-To say the read text of (the thing read - a thing) (this is the say the read text rule): Say "[command clarification break][read text of the thing read][paragraph break][command clarification break]".
+To say the read text of (the thing read - a thing) (this is the say the read text rule): Instead say "[command clarification break][the read text of the thing read][command clarification break][paragraph break]".
 
-Carry out an actor reading a thing (called the thing read) (this is the read rule): say the read text of the thing read.
+Carry out an actor reading a thing (called the thing read) (this is the read a thing rule): say the read text of the thing read.
 
 Chapter - Writing
 
@@ -84,11 +85,11 @@ Before erasing when the player does not carry an erasing tool and an erasing too
 	say error failed to obtain an erasing tool;
 	rule fails.
 
-Check erasing (this is the check erasing rule): unless the noun is erasable, instead say error the noun cannot be erased; unless the read text of the noun is not empty, instead say error the noun need not be erased; unless the player carries an erasing tool, instead say error no erasing tool.
+Check an actor erasing (this is the check erasing rule): unless the noun is erasable, instead say error the noun cannot be erased; unless the read text of the noun is not empty, instead say error the noun need not be erased; unless the player carries an erasing tool, instead say error no erasing tool.
 
-Carry out erasing (this is the carry out erasing rule): now the read text of the noun is "".
+Carry out an actor erasing (this is the carry out erasing rule): now the read text of the noun is "".
 
-Report erasing (this is the report erasing rule): say "You erase [the noun]."
+Report an actor erasing (this is the report erasing rule): say "You erase [the noun]."
 
 Basic Literacy ends here.
 
@@ -97,9 +98,11 @@ This module extends Inform 7 by providing some basic actions and types that allo
 Allowing the player to write arbitrary text on things is also allowed. The thing to be written on must have the "writable" property, and the player must have access to a "writing tool". Subsequent writes will append new paragraphs to the read text of the thing written.
 Allowing the player to erase the text on things is also allowed. The thing to be erased on must have the "erasable" property, and the player must have access to an "erasing tool".
 
-It is difficult to write a test for writing on the whiteboard, because the writing command uses the command buffer, which is not filled by the testing command.
+A writable thing is also erasable unless stated otherwise. 
+Writable-Erasable things: A notebook, a whiteboard, a graffiti
+Writable-only things: An engraving, a legal document.
 
-Example: * OLAB - A whiteboard on which the player can make notes
+Example: * OLAB -  A writable erasable thing on which the player can make notes 
 	
 	*: "OLAB" by "Bart Massey"
 	
@@ -121,23 +124,24 @@ Example: * OLAB - A whiteboard on which the player can make notes
 	An eraser is an erasing tool on the metal tray. The description is "A classic fuzzy whiteboard eraser, none too clean."
 	Test me with "read whiteboard / erase whiteboard / read whiteboard".
 	
-Example: * The Poet's Notebook
+Example: * The Poet's Notebook - A writable erasable thing
 	
 	*: "The Poet's Notebook" by "Andre Rodriguez"
 	
 	Include Basic Literacy by Bart Massey
 
-	When play begins: say "The Poet's bedroom is place where vulnerability and fragile emotions are encouraged. (The poet is a very sensitive person, be careful about what you write on his notebook.)"
+	When play begins: say "The Poet's bedroom is place where vulnerability and fragile emotions are encouraged. (Once you write something in his notebook, it is there for all eternity)"
 
 	The Poet's Bedroom is a room. "This is where the Poet sits down to think and reflect upon existence."
 
 	The desk is a fixed in place supporter in the Poet's Bedroom.
 
-	The Poet's Notebook is writable erasable scenery on the desk. The description is "A notebook to transform thoughts and feelings into words. [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand "notebook" as the Poet's Notebook.
+	The Poet's Notebook is writable scenery on the desk. The description is "A notebook to transform thoughts and feelings into words. [if read text of the Poet's Notebook is not empty] [read text][end if]". Understand "notebook" as the Poet's Notebook.
 
 	To say the contents of the notebook: say "The notebook reads:"; silently try reading the notebook.
 
 	A writing tool called a pen is on the desk. The description is "A regular pen. Many stories have been written with this old friend."
 
+	White Ink is an erasing tool on the desk. The description is "Could this white ink erase something written on the notebook?"
 	An erasing tool called an eraser is on the desk. The description is "An eraser. Use this to erase your Poetry, but don't be too harsh on yourself, self judgement may be hurtful."
-
+	Check an actor erasing the notebook  (this is the check erasing notebook rule): say "Not a chance, once you write something here there's no going back."
