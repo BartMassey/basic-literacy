@@ -7,8 +7,6 @@ Version 3 of Basic Literacy by Bart Massey begins here.
 
 Book - Reading
 
-[XXX: This book is deliberately not book-specific. It is arguable that this should be split out into a separate extension and eventually rolled into the Standard Rules in some form. Having "read" be a synonym for "examine" is bizarre IMHO.]
-
 Understand the command "read" as something new.
 
 A thing can be readable. A thing is rarely readable.
@@ -64,7 +62,7 @@ To say error too many erasables (this is the say error several erasables rule): 
 
 To say error no erasables (this is the say error no erasables rule): say "There is nothing to erase."
 
-Erasing is an action applying to one touchable thing and requiring light. Understand "erase" or "erase [thing]" as erasing.
+Erasing is an action applying to one touchable thing and requiring light. Understand "erase [thing]" as erasing.
 
 Rule for supplying a missing noun when erasing (this is the choose an erasable rule): let N be the number of touchable writable things; if N is greater than one, instead say error too many erasables; if N is zero, instead say error no erasables; now the noun is a random touchable writable thing.
 
