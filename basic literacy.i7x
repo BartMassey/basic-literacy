@@ -39,6 +39,8 @@ Rule for supplying a missing second noun when writing (this is the supply a writ
 
 To say error (T - a thing) is not for writing on (this is say error not for writing on rule): say "[The T] is not for writing on."
 
+To say error attempt to look up a non-existent row in the table: say "You are trying to write in a page that does not exist yet.".
+
 To say implicitly taking (T - a thing) (this is the say implicitly taking a thing for basic literacy rule): say "(taking [the T])[command clarification break]".
 
 To say error missing writing tool: say "You need something to write with."
