@@ -9,19 +9,17 @@ Book - Reading
 
 Understand the command "read" as something new.
 
-A thing can be readable. A thing is rarely readable.
-
 Reading is an action applying to one visible thing and requiring light.
-Every thing has an indexed text called the read text. The read text is usually "".
+Every thing has a text called the read text. The read text is usually "".
 Understand "read [thing]" as reading.
 
-To say error (the thing read - a thing) has no read text (this is the say no read text error rule): say "[The thing read] has no text to read."
+To say error (the thing read - a thing) has no readable (this is the say no readable error rule): say "There is no text there to read."
 
-Check an actor reading a thing (called the thing read) (this is the check reading a thing rule): if the read text of the thing read is empty, instead say error the thing read has no read text.
+Check an actor reading a thing (called the thing read) (this is the check reading a thing rule): if the read text of the thing read is "", instead say error the thing read has no readable.
 
-To say the read text of (the thing read - a thing) (this is the say the read text rule): Instead say "[command clarification break][the read text of the thing read][command clarification break][paragraph break]".
+To say the readable of (the thing read - a thing) (this is the say the readable rule): Say "[command clarification break][the read text of the thing read][command clarification break][paragraph break]".
 
-Carry out an actor reading a thing (called the thing read) (this is the read a thing rule): say the read text of the thing read.
+Carry out an actor reading a thing (called the thing read) (this is the read a thing rule): say the readable of the thing read.
 
 Chapter - Writing
 
